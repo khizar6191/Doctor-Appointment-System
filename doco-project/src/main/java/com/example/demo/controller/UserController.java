@@ -25,7 +25,6 @@ public class UserController {
 	{
 		return us.getUsers();
 				}
-<<<<<<< HEAD
 	@PostMapping("/login")
 	public Users loginCheck(@RequestBody Users l)
 	{
@@ -38,18 +37,4 @@ public class UserController {
 		return us.getAdmin(id);
 	}
 	
-=======
-
-//@GetMapping("/getAppointmentsofDoctor")
-//public List<Appointment> getAppointmentsofDoctor(@RequestParam ("users_")int did)
-//{
-//	return docser.getAppointmentsofDoctor(did); 
-//}
-@RequestMapping("/getAdminInfo")
-public Users getAdmin(@RequestParam int id)
-{
-	return us.getAdmin(id);
-}
-
->>>>>>> 84f2cae4e1be608cb18fc9c78623be59b4c98e05
 }

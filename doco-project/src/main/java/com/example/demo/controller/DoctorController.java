@@ -11,10 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.Service.DoctorService;
-<<<<<<< HEAD
-=======
-import com.example.demo.entity.Appointment;
->>>>>>> 84f2cae4e1be608cb18fc9c78623be59b4c98e05
 import com.example.demo.entity.Doctors;
 import com.example.demo.entity.DummyDoctor;
 import com.example.demo.entity.SlotSchedule;
@@ -58,28 +54,4 @@ public Doctors getDoctorByDId(@RequestParam("doctor_id_")int doctor_id)
 	return ds.getDoctorByDId(doctor_id);
 }
 
-<<<<<<< HEAD
-=======
-
-@PostMapping("/addSchedule")
-public Schedules addSchedule(@RequestBody Schedules sch)
-{
-	return ds.addSchedule(sch);
-}
-@GetMapping("/getSchedule")
-public List<SlotSchedule> getSchedule(@RequestParam("doctor_id_")int did)
-{
-	return ds.getSchedule(did);
-}
-@GetMapping("/getDoctorCount")
-public long getDoctorCount()
-{
-	return ds.getDoctorCount();
-}
-@GetMapping("/getAppointmentsofDoctor")
-public List<Appointment> getAppointmentsofDoctor(@RequestParam ("doctor_id_")int did)
-{
-	return ds.getAppointmentsofDoctor(did); 
-}
->>>>>>> 84f2cae4e1be608cb18fc9c78623be59b4c98e05
 }
