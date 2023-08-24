@@ -100,7 +100,7 @@ INSERT INTO Transactions (id_, doctor_id_, subscription_id_, payment_date_, amou
 
 -- Patients
 INSERT INTO Patients (id_, user_id_, fname_, lname_, gender_, email_, password_,address_, dob_, contact_) VALUES
-(1, 2, 'Alice', 'Smith', 'Female', 'alice@example.com', 'patient_password','456 Elm St', '1990-05-15', "98765432");
+(1, 3, 'Alice', 'Smith', 'Female', 'alice@example.com', 'patient_password','456 Elm St', '1990-05-15', "98765432");
 
 -- Appointments
 INSERT INTO Appointments (id_, patient_id_, time_,doctor_id_, date_, status_) VALUES
