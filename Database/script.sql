@@ -3,19 +3,19 @@ CREATE DATABASE IF NOT EXISTS DOCO;
 use DOCO;
 -- Role Table
 CREATE TABLE IF NOT EXISTS Roles (
-    id_ INT PRIMARY KEY NOT NULL  AUTO_INCREMENT,
+    id_ INT PRIMARY KEY NOT NULL,
 role_type_ CHAR(3) NOT NULL
 );
 
 -- Specializations
 CREATE TABLE IF NOT EXISTS Specialities (
-	id_ INT PRIMARY KEY NOT NULL  AUTO_INCREMENT,
+	id_ INT PRIMARY KEY NOT NULL,
 specialities_Name_ VARCHAR(255) NOT NULL
 );
 
 -- Location
 CREATE TABLE IF NOT EXISTS Locations (
-    id_ INT PRIMARY KEY NOT NULL  AUTO_INCREMENT,
+    id_ INT PRIMARY KEY NOT NULL ,
 location_Name_ VARCHAR(255) NOT NULL
 );
 
@@ -29,12 +29,12 @@ CREATE TABLE IF NOT EXISTS SubscriptionPlans (
 );
 -- Questions
 CREATE TABLE IF NOT EXISTS  Questions (
-    id_ INT NOT NULL PRIMARY KEY  AUTO_INCREMENT,
+    id_ INT NOT NULL PRIMARY KEY,
     questions_ VARCHAR(255) NOT NULL
 );
 -- Days
 CREATE TABLE IF NOT EXISTS Days (
-    id_ INT NOT NULL PRIMARY KEY  AUTO_INCREMENT,
+    id_ INT NOT NULL PRIMARY KEY ,
     day_ VARCHAR(255) NOT NULL
 );
 
@@ -57,6 +57,7 @@ CREATE TABLE IF NOT EXISTS Users (
 CREATE TABLE IF NOT EXISTS Doctors (
     id_ INT PRIMARY KEY NOT NULL  AUTO_INCREMENT,
 	fname_  VARCHAR(255) NOT NULL,
+    email_  VARCHAR(255) NOT NULL,
     lname_  VARCHAR(255) NOT NULL,
      gender_  VARCHAR(255) NOT NULL,
 experience_  INT NOT NULL,
@@ -83,6 +84,7 @@ CREATE TABLE IF NOT EXISTS Schedules (
     doctor_id_ INT NOT NULL,
     start_time_ TIME NOT NULL,
     end_time_ TIME NOT NULL,
+    date_ Date NOT NULL,
     FOREIGN KEY (doctor_id_) REFERENCES Doctors(id_)
 );
 
@@ -118,11 +120,13 @@ FOREIGN KEY (user_id_) REFERENCES Users (id_)
 CREATE TABLE IF NOT EXISTS Appointments (
     id_ INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     patient_id_ INT NOT NULL,
+    
     time_ TIME NOT NULL,
-    schedule_id_ INT NOT NULL,
+    doctor_id_ int NOT null,
     status_ INT NOT NULL,
+    date_ Date NOT NULL,
     FOREIGN KEY (patient_id_) REFERENCES Patients(id_),
-    FOREIGN KEY (schedule_id_) REFERENCES Schedules(id_)
+	FOREIGN KEY (doctor_id_) REFERENCES Doctors(id_)
 );
 
 -- DaysAvailbales
@@ -131,13 +135,4 @@ CREATE TABLE IF NOT EXISTS DayAvailables (
     day_id_ INT NOT NULL,
 FOREIGN KEY (doctor_id_) REFERENCES appointments(id_),
     FOREIGN KEY (day_id_) REFERENCES Days(id_)
-);
-
--- SpecializationsOfDoctor
-CREATE TABLE IF NOT EXISTS SpecialitiesOfDoctors (
-	doctor_id_ INT NOT NULL,
-    speciality_id_ INT NOT NULL,
-FOREIGN KEY (doctor_id_) REFERENCES Doctors(id_),
-      FOREIGN KEY (speciality_id_) REFERENCES Specialities(id_)
-    
 );
