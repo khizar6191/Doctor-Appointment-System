@@ -111,7 +111,7 @@ if (selectedLocation) {
                     </tr>
                     <tr>
                         <td colSpan="2">
-                            <a href="/"><input type="button" value="Log out" className="logout-btn btn-primary-soft btn" /></a>
+                            <a href="/logout"><input type="button" value="Log out" className="logout-btn btn-primary-soft btn" /></a>
                         </td>
                     </tr>
                 </table>

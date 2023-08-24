@@ -4,7 +4,7 @@ import {  useNavigate } from "react-router-dom";
 export default function AddScheduleComp(){
 
 
-    const doctorId=JSON.parse(localStorage.getItem("loggedDoctor")).user_id_.id_;
+    const doctorId=JSON.parse(localStorage.getItem("loggedDoctor")).id_;
 
 
     const init = {

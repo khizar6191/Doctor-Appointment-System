@@ -84,13 +84,25 @@ public class DoctorService {
 		{
 			return srepo.save(sch);
 		}
+<<<<<<< HEAD
 	 public List<Appointment> getAppointmentsofDoctor(int user_id)
+=======
+	 
+	 
+//	 public List<Appointment> getAppointmentsofDoctor(int user_id)
+//		{
+//			 int dr=getDoctorByUId(user_id).getId_();
+//			 
+//			 Doctors d=getDoctorByDId(dr);
+//			
+//			return ap.getAppointmentsofDoctor(d);
+//		}
+		public List<Appointment> getAppointmentsofDoctor(int did)
+>>>>>>> 84f2cae4e1be608cb18fc9c78623be59b4c98e05
 		{
-			 int dr=getDoctorByUId(user_id).getId_();
-			 
-			 Doctors d=getDoctorByDId(dr);
+			Doctors doc=getDoctorByDId(did);
 			
-			return ap.getAppointmentsofDoctor(d);
+			return ap.getAppointmentsofDoctor(doc);
 		}
 	 
 	 

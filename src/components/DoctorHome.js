@@ -52,7 +52,7 @@ function DoctorDash() {
                                 </tr>
                                 <tr>
                                     <td colSpan="2">
-                                        <a href="../logout.php"><input type="button" value="Log out" className="logout-btn btn-primary-soft btn" /></a>
+                                        <a href="/logout"><input type="button" value="Log out" className="logout-btn btn-primary-soft btn" /></a>
                                     </td>
                                 </tr>
                             </table>

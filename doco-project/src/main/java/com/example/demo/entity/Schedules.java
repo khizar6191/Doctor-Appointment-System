@@ -18,6 +18,7 @@ public class Schedules  {
 
 	@Id
 	int id_;
+<<<<<<< HEAD
 	@Id
 	int doctor_id_;
 	@Column
@@ -25,15 +26,30 @@ public class Schedules  {
 	@Column
 	Time end_time_;
 	@Id
+=======
+	 @Id
+    @Column(name = "doctor_id_")
+	int doctor_id_;
+	   @Id
+	    @Column(name = "date_")
+>>>>>>> 84f2cae4e1be608cb18fc9c78623be59b4c98e05
 	Date date_;
 	public Schedules() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+<<<<<<< HEAD
 	public Schedules(int id_, int docotor_id_, Time start_time_, Time end_time_,Date date_) {
 		super();
 		this.id_ = id_;
 		this.doctor_id_ = docotor_id_;
+=======
+	public Schedules(int id_, int doctor_id_, Date date_, Time start_time_, Time end_time_) {
+		super();
+		this.id_ = id_;
+		this.doctor_id_ = doctor_id_;
+		this.date_ = date_;
+>>>>>>> 84f2cae4e1be608cb18fc9c78623be59b4c98e05
 		this.start_time_ = start_time_;
 		this.end_time_ = end_time_;
 		this.date_ = date_;
