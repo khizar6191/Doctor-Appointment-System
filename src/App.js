@@ -21,6 +21,7 @@ import ViewSchedule from './components/ViewScheduleComp';
 import ViewAppointmentDoctorComp from './components/ViewAppointmentDoctorComp';
 import AddScheduleComp from './components/AS';
 import AdminViewAppointmentsComp from './components/AdminViewAppointment';
+import ViewAppointmentPatientComp from './components/patientBooking';
 // import ViewAppointmentDoctorComp from './components/ViewAppointmentDoctorComp';
 
 function App() {
@@ -92,7 +93,7 @@ function App() {
 
           <Route path="/Phame/vsp" element={<AllDoctorsComp/>}  />
            <Route path="/Phame/viewSchedule" element={<ViewSchedule/>}  />
-
+           <Route path="/Phame/viewAllAppoinment" element={<ViewAppointmentPatientComp/>}  />
           </Route>
           
           <Route path="/Dhame" element={<DoctorDash />} />

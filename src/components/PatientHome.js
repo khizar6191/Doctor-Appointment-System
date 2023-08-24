@@ -136,7 +136,7 @@ if (selectedLocation) {
         
         <tr className="menu-row">
             <td className="menu-btn menu-icon-session">
-                <a href="schedule.php" className="non-style-link-menu">
+                <a href="/Phame/viewAllAppoinment" className="non-style-link-menu">
                     <div><p className="menu-text">Scheduled Sessions</p></div>
                 </a>
             </td>
@@ -168,7 +168,7 @@ if (selectedLocation) {
                         <tr>
                             <td colSpan="1" className="nav-bar">
                                 <p style={{ fontSize: '23px', paddingLeft: '12px', fontWeight: 600, marginLeft: '20px' }}>Home</p>
-                            </td>
+                             </td>
                             <td width="25%">
                                 {/* Empty column */}
                             </td>

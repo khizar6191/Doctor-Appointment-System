@@ -1,6 +1,6 @@
 package com.example.demo.entity;
 
-
+import javax.persistence.Column;
 
 public class DummyDoctor {
 	String fname_;

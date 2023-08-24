@@ -15,10 +15,10 @@ public class DummyPatients {
 	
 
 		
-	public DummyPatients(int role_id_, int question_id_, int status_, String fname_, String lname_, String gender_,
+	public DummyPatients( int question_id_, int status_, String fname_, String lname_, String gender_,
 			String email_, String password_, String address_, String contact_, String answer_, Date dob_) {
 		super();
-		this.role_id_ = role_id_;
+		
 		this.question_id_ = question_id_;
 		this.status_ = status_;
 		this.fname_ = fname_;
