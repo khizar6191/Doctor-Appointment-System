@@ -75,14 +75,14 @@ function DoctorDash() {
                     </tr>
                     <tr className="menu-row">
                         <td className="menu-btn menu-icon-session">
-                            <a href="schedule.php" className="non-style-link-menu">
-                                <div><p className="menu-text">MY Sessions</p></div>
+                            <a href="/addSh" className="non-style-link-menu">
+                                <div><p className="menu-text">Add Sessions</p></div>
                             </a>
                         </td>
                     </tr>
                     <tr className="menu-row">
                         <td className="menu-btn menu-icon-appoinment">
-                            <a href="appointment.php" className="non-style-link-menu">
+                            <a href="/viewappointDoc" className="non-style-link-menu">
                                 <div><p className="menu-text">My Appoinments</p></div>
                             </a>
                         </td>

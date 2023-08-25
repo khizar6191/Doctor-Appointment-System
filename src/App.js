@@ -18,6 +18,10 @@ import ViewSchedules from './components/viewSchedulesAD';
 import ApproveReq from './components/ApproveRequest';
 import AllDoctorsComp from './components/ViewDocByPatient';
 import ViewSchedule from './components/ViewScheduleComp';
+import ViewAppointmentDoctorComp from './components/ViewAppointmentDoctorComp';
+import AddScheduleComp from './components/AS';
+import AdminViewAppointmentsComp from './components/AdminViewAppointment';
+// import ViewAppointmentDoctorComp from './components/ViewAppointmentDoctorComp';
 
 function App() {
   const location = useLocation();
@@ -54,19 +58,19 @@ function App() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/Phame">
+                  {/* <Link className="nav-link" to="/Phame">
                     p-Home
-                  </Link>
+                  </Link> */}
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/Dhame">
+                  {/* <Link className="nav-link" to="/Dhame">
                     D-Home
-                  </Link>
+                  </Link> */}
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/Ahame">
+                  {/* <Link className="nav-link" to="/Ahame">
                     A-Home
-                  </Link>
+                  </Link> */}
                 </li>
               </ul>
             </div>
@@ -99,9 +103,12 @@ function App() {
           <Route path="/viewAllPatientInfo" element={<ViewPatientComp/>} />
           <Route path="/viewSchedules" element={<ViewSchedules/>} />
           <Route path="/requestA" element={<ApproveReq/>} />
+           <Route path="/viewappointDoc" element={<ViewAppointmentDoctorComp/>} />  
           {/* <Route path="/vsp" element={<AllDoctorsComp/>}  />
            <Route path="/viewSchedule" element={<ViewSchedules/>}  /> */}
+                 <Route path="/addSh" element={<AddScheduleComp/>} /> 
 
+                 <Route path="/viewAppointByAdmin" element={<AdminViewAppointmentsComp/>} />  
 
         </Routes>
       </div>

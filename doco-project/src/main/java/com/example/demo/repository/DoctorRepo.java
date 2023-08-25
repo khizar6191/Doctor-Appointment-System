@@ -3,10 +3,11 @@ package com.example.demo.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import com.example.demo.entity.Doctors;
 import com.example.demo.entity.Users;
-
+@Repository
 public interface DoctorRepo extends JpaRepository<Doctors,Integer> {
 	@Query("select d from Doctors d where id_ = :did")
 	public Doctors getDoctorByDId(@Param("did") int did);

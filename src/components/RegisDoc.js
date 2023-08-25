@@ -370,7 +370,7 @@ export default function DoctorRegistrationComp(){
 
             <div class="mb-3">
                 <label for="password_" class="form-label">Password.:</label>
-                <input type="password_" class="form-control" id="password_" placeholder="Enter password_"  name="password_" value={info.password_.value}
+                <input type="password" class="form-control" id="password_" placeholder="Enter password_"  name="password_" value={info.password_.value}
                  
                  onChange={(e)=>handleChange("password_",e.target.value)}/>
                  <div className="error-msg"> {info.password_.error}</div> 
@@ -378,7 +378,7 @@ export default function DoctorRegistrationComp(){
 
             <div class="mb-3">
                  <label for="cpassword_" class="form-label">Confirm Password.:</label>
-                <input type="password_"  class="form-control" id="cpassword_" placeholder="Enter Confirm password_"   name="cpassword_" 
+                <input type="password"  class="form-control" id="cpassword_" placeholder="Enter Confirm password_"   name="cpassword_" 
                        
                        
                         onChange={(e)=> handleChange("cpassword_", e.target.value)}

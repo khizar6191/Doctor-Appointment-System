@@ -161,7 +161,7 @@ if (selectedLocation) {
             </div>
            
             <div></div>
-            <Outlet>
+           
             <div className="dash-body"  style={{ marginTop: '15px'}}>
                 <table style={{ borderSpacing: 0, margin: 0, padding: 0, width: '100%' }}>
                     <tbody>
@@ -408,7 +408,7 @@ if (selectedLocation) {
                     </tbody>
                 </table>
             </div>
-            </Outlet>
+            <Outlet/>
         </div>
        
     );

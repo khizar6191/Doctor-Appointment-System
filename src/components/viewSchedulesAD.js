@@ -15,7 +15,7 @@ export default function ViewSchedules(){
             console.log(obj)
                 setInfo(obj);
         })
-    },[info])
+    },[])
 
     return(
         <div>
@@ -38,7 +38,7 @@ export default function ViewSchedules(){
         ))}
     </tbody>
 </table>
-            {/*JSON.stringify(info)*/}
+           
         </div>
     )
 }

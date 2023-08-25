@@ -1,18 +1,15 @@
 package com.example.demo.Service;
-
-import java.time.LocalTime;
 import java.util.ArrayList;
+import java.time.LocalTime;
 import java.util.List;
 
-import org.aspectj.weaver.patterns.TypePatternQuestions.Question;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import com.example.demo.entity.Appointment;
 import com.example.demo.entity.Doctors;
 import com.example.demo.entity.DummyDoctor;
-import com.example.demo.entity.Dummy_Appointment;
 import com.example.demo.entity.Locations;
 import com.example.demo.entity.Questions;
 import com.example.demo.entity.Roles;
@@ -33,11 +30,14 @@ public class DoctorService {
 	DoctorRepo dr;
 	@Autowired
 	UserRepo ur;
+
 	@Autowired
 	SchRepository srepo;
+
+	
 	@Autowired
 	AppointmentRepository ap;
-	
+
 	public List<Doctors> getAll()
 	{
 		return dr.findAll();
@@ -45,10 +45,8 @@ public class DoctorService {
 	
 	public Doctors getDoctorByDId(int doctor_id)
 	{	
-		return dr.getDoctorByDId(doctor_id);
+		return dr.findById(doctor_id).get();
 	}
-	
-	
 	
 	public Doctors getDoctorByUId(int user_id)
 	{
@@ -56,12 +54,8 @@ public class DoctorService {
 		
 		return dr.getDoctorByUId(u);
 	}
-	
-	
-	
 	public void Save(DummyDoctor doc)
-	{	 
-		Roles r=new Roles(2,"DOC");
+	{	Roles r=new Roles(2,"DOC");
 		Questions q=new Questions(doc.getQuestion_id_());
 		Specialities s=new Specialities(doc.getSpecialities_id_());
 		Locations l =new Locations(doc.getLocation_id_());
@@ -73,17 +67,17 @@ public class DoctorService {
 				doc.getContact_(),doc.getDescription_(),doc.getStatus_(),u,s,l);
 		
 		dr.save(doct);
-	
 	}
 	public long getDoctorCount()
 	{
 		return dr.count();
 	}
-	
 	 public Schedules addSchedule(Schedules sch)
 		{
 			return srepo.save(sch);
 		}
+	 
+	 
 	 public List<Appointment> getAppointmentsofDoctor(int user_id)
 		{
 			 int dr=getDoctorByUId(user_id).getId_();
@@ -150,7 +144,7 @@ public class DoctorService {
 			}
 			return sl;
 		}
+	
 	 
-
-     
+	
 }

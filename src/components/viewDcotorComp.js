@@ -8,7 +8,7 @@ export default function ViewDoctorComp(){
     //getting the docotr object by passing patient id that is stored on localstorage
     useEffect(()=>{
 
-        fetch("http://localhost:8080/getDoctorByDId?doctor_id="+did)
+        fetch("http://localhost:8080/getDoctorBy?doctor_id_="+did)
         .then(resp=>resp.json())
 
         .then(obj=>{

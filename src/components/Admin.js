@@ -72,7 +72,7 @@ function Admin ()  {
                                 </tr>
                                 <tr>
                                     <td colSpan="2">
-                                        <a href="../logout.php"><input type="button" value="Log out" className="logout-btn btn-primary-soft btn" /></a>
+                                        <a href="#"><input type="button" value="Log out" className="logout-btn btn-primary-soft btn" /></a>
                                     </td>
                                 </tr>
                             </table>
@@ -81,7 +81,7 @@ function Admin ()  {
                     
                     <tr className="menu-row">
                         <td className="menu-btn menu-icon-dashbord menu-active menu-icon-dashbord-active">
-                            <a href="index.php" className="non-style-link-menu non-style-link-menu-active">
+                            <a href="#" className="non-style-link-menu non-style-link-menu-active">
                                 <div><p className="menu-text">Dashboard</p></div>
                             </a>
                         </td>
@@ -109,7 +109,7 @@ function Admin ()  {
                     </tr>
                     <tr className="menu-row">
                         <td className="menu-btn menu-icon-appoinment">
-                            <a href="appointment.php" className="non-style-link-menu">
+                            <a href="/viewAppointByAdmin" className="non-style-link-menu">
                                 <div><p className="menu-text">All Appoinments</p></div>
                             </a>
                         </td>
@@ -160,10 +160,10 @@ function Admin ()  {
                                                     </div>
                                                 )}
                                                 <p>Haven't any idea about doctors? No problem, let's jump to{' '}
-                                                    <a href="doctors.php" className="non-style-link">
+                                                    <a href="#" className="non-style-link">
                                                         <b>"All Doctors"</b>
                                                     </a> section or{' '}
-                                                    <a href="schedule.php" className="non-style-link">
+                                                    <a href="#" className="non-style-link">
                                                         <b>"Sessions"</b>
                                                     </a>
                                                     <br />
@@ -218,7 +218,7 @@ function Admin ()  {
                                                                     </div>
                                                                     <br />
                                                                     <div className="h3-dashboard">
-                                                                        All Patients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                        All Doctors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                     </div>
                                                                 </div>
                                                                 <div className="btn-icon-back dashboard-icons menu-icon-doctor" style={{ backgroundImage: "url('../img/icons/doctors-hover.svg')" }}></div>
@@ -232,7 +232,7 @@ function Admin ()  {
                                                                     </div>
                                                                     <br />
                                                                     <div className="h3-dashboard">
-                                                                        All Patients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                        All Appointments &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                     </div>
                                                                 </div>
                                                                 <div className="btn-icon-back dashboard-icons" style={{ backgroundImage: "url('../img/icons/patients-hover.svg')" }}></div>

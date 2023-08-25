@@ -1,18 +1,18 @@
 package com.example.demo.entity;
 
-import javax.annotation.Generated;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.Lob;
+
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+
 import javax.persistence.Table;
 
-import org.hibernate.annotations.ManyToAny;
+
 
 @Entity
 @Table(name="doctors")
@@ -43,8 +43,8 @@ public class Doctors {
 	
 	@Column
 	int status_;
-	@OneToOne
-	@JoinColumn(name="user_id_")
+	 @ManyToOne
+	    @JoinColumn(name = "user_id_")
 	Users user_id_;
 	
 	@ManyToOne
@@ -54,6 +54,7 @@ public class Doctors {
 	@ManyToOne
 	@JoinColumn(name="location_id_")
 	Locations location_id_;
+
 
 	public Doctors() {
 		super();
@@ -203,6 +204,7 @@ public class Doctors {
 	public void setLocation_id_(Locations location_id_) {
 		this.location_id_ = location_id_;
 	}
+
 	
 
 }
