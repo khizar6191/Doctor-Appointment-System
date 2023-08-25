@@ -21,6 +21,7 @@ import ViewSchedule from './components/ViewScheduleComp';
 import ViewAppointmentDoctorComp from './components/ViewAppointmentDoctorComp';
 import AddScheduleComp from './components/AS';
 import AdminViewAppointmentsComp from './components/AdminViewAppointment';
+import LogoutComp from './components/LogoutComp';
 // import ViewAppointmentDoctorComp from './components/ViewAppointmentDoctorComp';
 
 function App() {
@@ -80,13 +81,14 @@ function App() {
 
       <div>
         <Routes>
-          <Route path="/" element={<App1 />} />
+           <Route path="/" element={<App1 />} /> 
           <Route path="/patient" element={<PatientReges />} />
           
           <Route path="/login" element={<LoginComp />} />
+          <Route path="/logout" element={<LogoutComp />} />
           <Route path="/doctor" element={<DoctorRegistrationComp />} />
           <Route path="/logic" element={<GetBookComp />} />
-          <Route path="/home" element={<App1 />} />
+           <Route path="/home" element={<App1 />} /> 
           
           <Route path="/Phame" element={<Dashboard/>} >
 

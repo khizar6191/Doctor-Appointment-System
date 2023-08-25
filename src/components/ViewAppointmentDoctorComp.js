@@ -7,7 +7,7 @@ export default function ViewAppointmentDoctorComp() {
     const [Appointment, setAppointment] = useState([]);
          console.log(doctorid)
     useEffect(() => {
-        fetch("http://localhost:8080/getAppointmentsofDoctor?users_=" + doctorid)
+        fetch("http://localhost:8080/getAppointmentsofDoctor?doctor_id_=" + doctorid)
             .then(resp => resp.json())
             .then(obj => {  console.log(obj)
                 if (Array.isArray(obj)) {
@@ -52,7 +52,7 @@ export default function ViewAppointmentDoctorComp() {
                 type="submit"
                 className="btn btn-primary btn-lg ms-2"
                 onMouseDown={() => setStorage(app.patient.id_)} // Assuming id_ is the correct property
-                onMouseUp={() => navigate("/viewPatient")}
+                onMouseUp={() => navigate("/viewAllPatientInfo")}
             >
                 View Info
             </button>

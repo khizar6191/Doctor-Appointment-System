@@ -4,7 +4,7 @@ import {  useNavigate } from "react-router-dom";
 export default function PatientReges(){
 
     const init = {
-        role_id_:{value:"",touched:false,valid:false,error:""},//
+        role_id_:{value:"",touched:false,valid:false,error:""},
         question_id_:{value:"",touched:false,valid:false,error:""},
         status_:{value:"",touched:false,valid:false,error:""},
         fname_:{value:"",touched:false,valid:false,error:""},
@@ -283,7 +283,7 @@ export default function PatientReges(){
 
 
 
-\
+
             <div class="mb-3">
                 <label for="password_" class="form-label">Password.:</label>
                 <input type="password" class="form-control" id="password_" placeholder="Enter password" name="password_" value={info.password_.value}

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.Service.AppointmentService;
 import com.example.demo.Service.DoctorService;
-
+import com.example.demo.entity.Appointment;
 import com.example.demo.entity.Doctors;
 import com.example.demo.entity.DummyDoctor;
 import com.example.demo.entity.Schedules;
@@ -62,5 +62,10 @@ public List<SlotSchedule> getSchedule(@RequestParam("doctor_id_")int did)
 public long getDoctorCount()
 {
 	return ds.getDoctorCount();
+}
+@GetMapping("/getAppointmentsofDoctor")
+public List<Appointment> getAppointmentsofDoctor(@RequestParam ("doctor_id_")int did)
+{
+	return ds.getAppointmentsofDoctor(did); 
 }
 }

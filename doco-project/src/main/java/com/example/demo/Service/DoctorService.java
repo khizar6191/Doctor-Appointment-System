@@ -78,13 +78,19 @@ public class DoctorService {
 		}
 	 
 	 
-	 public List<Appointment> getAppointmentsofDoctor(int user_id)
+//	 public List<Appointment> getAppointmentsofDoctor(int user_id)
+//		{
+//			 int dr=getDoctorByUId(user_id).getId_();
+//			 
+//			 Doctors d=getDoctorByDId(dr);
+//			
+//			return ap.getAppointmentsofDoctor(d);
+//		}
+		public List<Appointment> getAppointmentsofDoctor(int did)
 		{
-			 int dr=getDoctorByUId(user_id).getId_();
-			 
-			 Doctors d=getDoctorByDId(dr);
+			Doctors doc=getDoctorByDId(did);
 			
-			return ap.getAppointmentsofDoctor(d);
+			return ap.getAppointmentsofDoctor(doc);
 		}
 	 
 	 public List<SlotSchedule> getSchedule(int did)

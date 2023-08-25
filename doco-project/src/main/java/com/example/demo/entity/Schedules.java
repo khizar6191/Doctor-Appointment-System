@@ -20,9 +20,11 @@ public class Schedules {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int id_;
-	@Column
+	 @Id
+    @Column(name = "doctor_id_")
 	int doctor_id_;
-	@Id
+	   @Id
+	    @Column(name = "date_")
 	Date date_;
 	@Column
 	Time start_time_,end_time_;
@@ -30,9 +32,9 @@ public class Schedules {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Schedules(int doctor_id_, Date date_, Time start_time_, Time end_time_) {
+	public Schedules(int id_, int doctor_id_, Date date_, Time start_time_, Time end_time_) {
 		super();
-
+		this.id_ = id_;
 		this.doctor_id_ = doctor_id_;
 		this.date_ = date_;
 		this.start_time_ = start_time_;

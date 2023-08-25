@@ -36,11 +36,11 @@ public class UserController {
 		return us.getUsers();
 				}
 
-@GetMapping("/getAppointmentsofDoctor")
-public List<Appointment> getAppointmentsofDoctor(@RequestParam ("users_")int did)
-{
-	return docser.getAppointmentsofDoctor(did); 
-}
+//@GetMapping("/getAppointmentsofDoctor")
+//public List<Appointment> getAppointmentsofDoctor(@RequestParam ("users_")int did)
+//{
+//	return docser.getAppointmentsofDoctor(did); 
+//}
 @RequestMapping("/getAdminInfo")
 public Users getAdmin(@RequestParam int id)
 {
