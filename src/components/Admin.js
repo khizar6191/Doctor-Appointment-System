@@ -100,13 +100,13 @@ function Admin ()  {
                             </a>
                         </td>
                     </tr>
-                    <tr className="menu-row">
+                     <tr className="menu-row">
                         <td className="menu-btn menu-icon-schedule">
-                            <a href="/viewSchedules" className="non-style-link-menu">
-                                <div><p className="menu-text">Schedules</p></div>
+                            <a href="/frequent" className="non-style-link-menu">
+                                <div><p className="menu-text">Stats</p></div>
                             </a>
                         </td>
-                    </tr>
+                    </tr> 
                     <tr className="menu-row">
                         <td className="menu-btn menu-icon-appoinment">
                             <a href="/viewAppointByAdmin" className="non-style-link-menu">
@@ -224,20 +224,7 @@ function Admin ()  {
                                                                 <div className="btn-icon-back dashboard-icons menu-icon-doctor" style={{ backgroundImage: "url('../img/icons/doctors-hover.svg')" }}></div>
                                                             </div>
                                                         </td>
-                                                        <td style={{ width: '25%' }}>
-                                                            <div className="dashboard-items" style={{ padding: '30px', margin: 'auto', width: '95%', display: 'flex' }}>
-                                                                <div>
-                                                                    <div className="h1-dashboard">
-                                                                        {patientrow.num_rows}
-                                                                    </div>
-                                                                    <br />
-                                                                    <div className="h3-dashboard">
-                                                                        All Appointments &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                    </div>
-                                                                </div>
-                                                                <div className="btn-icon-back dashboard-icons" style={{ backgroundImage: "url('../img/icons/patients-hover.svg')" }}></div>
-                                                            </div>
-                                                        </td>
+                                                        
                                                         </tr>
                                                        
                                                 </table>

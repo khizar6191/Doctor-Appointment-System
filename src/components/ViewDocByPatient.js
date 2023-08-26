@@ -4,7 +4,6 @@ import {  useNavigate } from "react-router-dom";
 import { useSelector } from 'react-redux';
 
 export default function AllDoctorsComp(){
-    
     const patientid=JSON.parse(localStorage.getItem("loggedPatient")).id_;
     console.log(patientid)
     const[doctors,setDoctors]=useState([]);
@@ -33,11 +32,11 @@ console.log(mystate)
 
     //navigating to view schedule of selected doctor or login page
     const handleChange=(e)=>{
-    
-            alert("aaaaa")
+        
+            console.log(doctorid)
             localStorage.setItem("doctorid",doctorid);
             navigate("/Phame/viewSchedule")
-       
+     
 
     
     }

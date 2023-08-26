@@ -104,21 +104,7 @@ export default function DoctorRegistrationComp(){
                                 error = "Passwords do not match"
                              }     
                                 break;
-           /*case 'qualification_':
-                            var pattern = /^[(MD|MBBS|BDS|BHMS|BAMS)]{2,7}$/
-                          if(pattern.test(value) )
-                             {
-                                 valid = true;
-                                 error = "";
-                             } 
-                             else
-                            {
-                                 valid = false;
-                                 error = "Please enter valid qualification_ in Capital letters"
-                            }     
-                            break;
-
-          */
+          
            
               case 'experience_':
                             var pattern = /^[0-9]{1,2}$/
@@ -172,6 +158,7 @@ export default function DoctorRegistrationComp(){
         console.log(formvalid)  
         dispatch({type: 'update', data: {name,value,touched: true, valid, error,formvalid} })
     }
+
 
     const onFocusout = (name,value) => {
         const {valid,error} = validateData(name,value)
@@ -281,17 +268,17 @@ export default function DoctorRegistrationComp(){
             <div class="mb-3">
                 <label class="form-label" for="gender_"> Gender :- </label>
                 <input class="form-check-input" type="radio" name="gender_" id="gender_" value="Male"
-                   onChange={(e)=>dispatch({type: 'update', data: {name:"gender_",value:e.target.value,touched: true, valid:true, error:"",formvalid:true} })}/> Male
+                   onChange={(e)=>dispatch({type: 'update', data: {name:"gender_",value:e.target.value,touched: true, valid:true, error:""} })}/> Male
                 
                 <input class="form-check-input" type="radio" name="gender_" id="gender_" value="Female"
-                    onChange={(e)=>dispatch({type: 'update', data: {name:"gender_",value:e.target.value,touched: true, valid:true, error:"",formvalid:true} })}/> Female
+                    onChange={(e)=>dispatch({type: 'update', data: {name:"gender_",value:e.target.value,touched: true, valid:true, error:""} })}/> Female
                   
                     
             </div>
 
             <div class="mb-3">
                 <label for="qualification_" class="form-label">Qualification_ :</label>
-                <select style={{width:200}}  onChange={(e)=>dispatch({type: 'update', data: {name:"qualification_",value:e.target.value,touched: true, valid:true, error:"",formvalid:true} })}>
+                <select style={{width:200}}  onChange={(e)=>dispatch({type: 'update', data: {name:"qualification_",value:e.target.value,touched: true, valid:true, error:""} })}>
                         <option value="select">Select</option>
                         <option value="MD">MD</option>
                         <option value="DNB">DNB</option>
@@ -349,7 +336,7 @@ export default function DoctorRegistrationComp(){
                  
             <div class="mb-3">
                 <label for="specialities_id_" class="form-label">Sepcialization :</label>
-                <select style={{width:200}}   onChange={(e)=>dispatch({type: 'update', data: {name:"specialities_id_",value:e.target.value,touched: true, valid:true, error:"",formvalid:true} })}>
+                <select style={{width:200}}   onChange={(e)=>dispatch({type: 'update', data: {name:"specialities_id_",value:e.target.value,touched: true, valid:true, error:""} })}>
                         <option value="select">Select Sepciality</option>
                         <option value="1">Dermatology</option>
                         <option value="2">Cardiology</option>
@@ -392,7 +379,7 @@ export default function DoctorRegistrationComp(){
             <div class="mb-3">
                 <label class="form-label" for="question_id_"> Security Question :- </label>
                 <select class="form-control" id="question_id_" name="question_id_"
-                 onChange={(e)=>dispatch({type: 'update', data: {name:"question_id_",value:e.target.value,touched: true, valid:true, error:"",formvalid:true} })} >
+                 onChange={(e)=>dispatch({type: 'update', data: {name:"question_id_",value:e.target.value,touched: true, valid:true, error:""} })} >
                     <option value="0">Select</option>
                     <option value="1">What is your nickname ?</option>
                     <option value="2">What is your native place ?</option>
@@ -405,7 +392,7 @@ export default function DoctorRegistrationComp(){
             <div class="mb-3">
                 <label for="answer_" class="form-label">Answer:</label>
                 <input type="text" class="form-control" id="answer_" placeholder="Enter answer_..."  name="answer_" value={info.answer_.value}
-                onChange={(e)=>dispatch({type: 'update', data: {name:"answer_",value:e.target.value,touched: true, valid:true, error:"",formvalid:true} })}/>
+                onChange={(e)=>dispatch({type: 'update', data: {name:"answer_",value:e.target.value,touched: true, valid:true} })}/>
             </div>
 
             

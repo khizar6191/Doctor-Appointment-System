@@ -23,20 +23,20 @@ export default function AdminViewDoctorsComp(){
         
     }
 
-    const deleteDoctor=(e)=>{
+    // const deleteDoctor=(e)=>{
       
-        fetch("http://localhost:8080/deleteByUId?user_id="+e)
-        .then(resp=>resp.json())
-        .then(obj=>  { if(obj===true)
-                        {
-                            alert("Doctor removed...");
-                        }
-                        else{
-                            alert("not fired")
-                        }
+    //     fetch("http://localhost:8080/deleteByUId?user_id="+e)
+    //     .then(resp=>resp.json())
+    //     .then(obj=>  { if(obj===true)
+    //                     {
+    //                         alert("Doctor removed...");
+    //                     }
+    //                     else{
+    //                         alert("not fired")
+    //                     }
                     
-        })
-    }
+    //     })
+    // }
 
     
 
@@ -68,14 +68,15 @@ export default function AdminViewDoctorsComp(){
                                         <td>
                                             <button type="submit" className="btn btn-primary btn-lg ms-2" onMouseDown={()=>{setStorage(doctor.id_)}}
                                                                                       onMouseUp={()=>{navigate("/ViewDoctorComp")}}>View Info</button>
-                                            <button type="submit" className="btn btn-primary btn-lg ms-2" onClick={()=>{deleteDoctor(doctor.user_id_.id_)}} >Remove</button>
-                                        </td>
+                                                              </td>
                                 </tr>
                         })  
                     }
                     </tbody>
                 </table>
              </form>
+             <button className="btn btn-primary btn-lg ms-2" onClick={() => navigate("/Ahame")} > Back</button>
+            
         </div>
     )
 }

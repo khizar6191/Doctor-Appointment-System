@@ -77,29 +77,7 @@ export default function  LoginComp (){
     return(
         <div className="pat">    
         <br/>
-        {/*  
-        <form action="">
-            <div class="mb-3 mt-3">
-                <label for="email" class="form-label">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value={info.email}
-                onChange={(e)=>{dispatch({type:'update',fld:'email',val:e.target.value})}}/>
-                <div id="emailhelp" className="form-text">We will Never share your email with anyone else</div>
-            </div>
-            <div class="mb-3">
-                <label for="pwd" class="form-label">Password:</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" value={info.password}
-                 onChange={(e)=>{dispatch({type:'update',fld:'password',val:e.target.value})}}/>
-            </div>
-            <div class="form-check mb-3">
-                <label class="form-check-label">
-                <input class="form-check-input" type="checkbox" name="remember"/> Remember me
-                </label>
-            </div>
-            <button type="submit" class="btn btn-primary" onClick={(e)=>{sendData(e)}}>Submit</button>
-            <button type="reset" class="btn btn-primary" onClick={()=>{dispatch({type:'reset'})}}>Clear</button>
-        </form>
-        */}
-
+        
 
 <div className="container-fluid">
             <div className="row justify-content-center align-items-center h-100">
@@ -131,9 +109,9 @@ export default function  LoginComp (){
                             
 
                         </form>
-                        <Link to="/forgetPassword" className="nav-link px-3">Forget Password</Link>
-                        <Link to="/patientRegistration" className="nav-link px-3">New Patient ? Register here ...</Link>
-                        <p> {JSON.stringify(info)}</p>
+                        <Link to="#" className="nav-link px-3">Forget Password</Link>
+                        <Link to="/" className="nav-link px-3">New Patient ? Register first ...</Link>
+                        {/* <p> {JSON.stringify(info)}</p> */}
                        </div>
                      </div>
                   </div>

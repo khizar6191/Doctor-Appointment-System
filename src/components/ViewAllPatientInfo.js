@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 //THIS COMPONENT WILL DISPLAY PATIENT INFORMATION
 export default function ViewPatientComp(){
-
+    const navigate = useNavigate();
     const did=localStorage.getItem("viewId");
     const[info,setInfo]=useState(null);
     //getting the patient object by passing patient id that is stored on localstorage
@@ -57,6 +57,8 @@ export default function ViewPatientComp(){
                     
                </tbody> 
             </table>
+            <button className="btn btn-primary btn-lg ms-2" onClick={() => navigate("/AdminViewPatientsComp")} > Back</button>
+          
             {/*JSON.stringify(info)*/}
         </div>
     )

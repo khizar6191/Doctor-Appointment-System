@@ -265,6 +265,11 @@ export default function PatientReges(){
                   onChange={(e)=>dispatch({type: 'update', data: {name:"dob_",value:e.target.value,touched: true, valid:true, error:"",formvalid:true} })}/>
             </div>
 
+           
+           
+
+            
+
             <div class="mb-3">
                 <label for="address_" class="form-label">Address:</label>
                 <input type="text" class="form-control" id="address_" placeholder="Enter area..." name="address_" value={info.address_.value}
@@ -328,7 +333,7 @@ export default function PatientReges(){
 
         </div>
 
-        <p>{JSON.stringify(info)}</p> 
+        {/* <p>{JSON.stringify(info)}</p>  */}
 </p>
         </div>
 

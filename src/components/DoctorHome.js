@@ -61,18 +61,12 @@ function DoctorDash() {
                     
                     <tr className="menu-row">
                         <td className="menu-btn menu-icon-dashbord menu-active menu-icon-dashbord-active">
-                            <a href="index.php" className="non-style-link-menu non-style-link-menu-active">
+                            <a href="/Dhame" className="non-style-link-menu non-style-link-menu-active">
                                 <div><p className="menu-text">Dashboard</p></div>
                             </a>
                         </td>
                     </tr>
-                    <tr className="menu-row">
-                        <td className="menu-btn menu-icon-patient">
-                            <a href="doctors.php" className="non-style-link-menu">
-                                <div><p className="menu-text">All Patients</p></div>
-                            </a>
-                        </td>
-                    </tr>
+                   
                     <tr className="menu-row">
                         <td className="menu-btn menu-icon-session">
                             <a href="/addSh" className="non-style-link-menu">
@@ -129,28 +123,15 @@ function DoctorDash() {
                                                     <div>
                                                         <h3>Welcome!</h3>
                                                         {/* Display the first name */}
-                                                        <h1>{doctor.fname_}.</h1>
+                                                        <h1>Dr.{doctor.fname_}.</h1>
                                                         {/* ... Other content ... */}
                                                     </div>
                                                 )}
-                                                <p>Haven't any idea about doctors? No problem, let's jump to{' '}
-                                                    <a href="doctors.php" className="non-style-link">
-                                                        <b>"All Doctors"</b>
-                                                    </a> section or{' '}
-                                                    <a href="schedule.php" className="non-style-link">
-                                                        <b>"Sessions"</b>
-                                                    </a>
-                                                    <br />
-                                                    Track your past and future appointments history.
-                                                    <br />
-                                                    Also find out the expected arrival time of your doctor or medical consultant.
-                                                    <br /><br />
+                                                <p>Welcome to Your Doctor's Portal!
+We're here to help you provide the best care for your patients.<br/> Stay organized, manage appointments, and access patient information with ease. Your dedication to healthcare is making a difference every day. Thank you for your commitment to the well-being of your patients."
                                                 </p>
-                                                <h3>Channel a Doctor Here</h3>
-                                                <form action="schedule.php" method="post" style={{ display: 'flex' }}>
-                                                    <input type="search" name="search" className="input-text" placeholder="Search Doctor and We will Find The Session Available" list="doctors" style={{ width: '45%' }} />&nbsp;&nbsp;
-                                                    <input type="Submit" value="Search" className="login-btn btn-primary btn" style={{ paddingLeft: '25px', paddingRight: '25px', paddingTop: '10px', paddingBottom: '10px' }} />
-                                                </form>
+                                                <h3>Channel your schedule And Appoinments Here...</h3>
+                                               
                                                 <br />
                                                 <br />
                                             </td>
@@ -161,95 +142,7 @@ function DoctorDash() {
                         </tr>
                         <tr>
                             <td colSpan="4">
-                                <table border="0" width="100%">
-                                    <tr>
-                                        <td width="50%">
-                                            <center>
-                                                <table className="filter-container" style={{ border: 'none' }} border="0">
-                                                    <tr>
-                                                        <td colSpan="4">
-                                                            <p style={{ fontSize: '20px', fontWeight: 600, paddingLeft: '12px' }}>Status</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        
-                                                        <td style={{ width: '25%' }}>
-                                                            <div className="dashboard-items" style={{ padding: '20px', margin: 'auto', width: '95%', display: 'flex' }}>
-                                                                <div>
-                                                                    <div className="h1-dashboard">
-                                                                        {patientrow.num_rows}
-                                                                    </div>
-                                                                    <br />
-                                                                    <div className="h3-dashboard">
-                                                                        All Patients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                    </div>
-                                                                </div>
-                                                                <div className="btn-icon-back dashboard-icons" style={{ backgroundImage: "url('../img/icons/patients-hover.svg')" }}></div>
-                                                            </div>
-                                                        </td>
-                                                        <td style={{ width: '25%' }}>
-                                                            <div className="dashboard-items" style={{ padding: '20px', margin: 'auto', width: '95%', display: 'flex' }}>
-                                                                <div>
-                                                                    <div className="h1-dashboard">
-                                                                        {appointmentrow.num_rows}
-                                                                    </div>
-                                                                    <br />
-                                                                    <div className="h3-dashboard">
-                                                                        NewBooking &nbsp;&nbsp;
-                                                                    </div>
-                                                                </div>
-                                                                <div className="btn-icon-back dashboard-icons" style={{ marginLeft: '0px', backgroundImage: "url('../img/icons/book-hover.svg')" }}></div>
-                                                            </div>
-                                                        </td>
-                                                        </tr>
-                                                        <tr>
-                                                        
-                                                        <td style={{ width: '25%' }}>
-                                                            <div className="dashboard-items" style={{ padding: '20px', margin: 'auto', width: '95%', display: 'flex', paddingTop: '21px', paddingBottom: '21px' }}>
-                                                                <div>
-                                                                    <div className="h1-dashboard">
-                                                                        {schedulerow.num_rows}
-                                                                    </div>
-                                                                    <br />
-                                                                    <div className="h3-dashboard" style={{ fontSize: '15px' }}>
-                                                                        Today Sessions
-                                                                    </div>
-                                                                </div>
-                                                                <div className="btn-icon-back dashboard-icons" style={{ backgroundImage: "url('../img/icons/session-iceblue.svg')" }}></div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </center>
-                                        </td>
-                                        <td>
-                                            <p style={{ fontSize: '20px', fontWeight: 600, paddingLeft: '40px' }} className="anime">Your Upcoming Booking</p>
-                                            <center>
-                                                <div className="abc scroll" style={{ height: '250px', padding: 0, margin: 0 }}>
-                                                    <table width="85%" className="sub-table scrolldown" border="0">
-                                                        <thead>
-                                                            <tr>
-                                                                <th className="table-headin">
-                                                                    Appoint. Number
-                                                                </th>
-                                                                <th className="table-headin">
-                                                                    Session Title
-                                                                </th>
-                                                                <th className="table-headin">
-                                                                    Doctor
-                                                                </th>
-                                                                <th className="table-headin">
-                                                                    {/* Table header */}
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        {/* Table rows */}
-                                                    </table>
-                                                </div>
-                                            </center>
-                                        </td>
-                                    </tr>
-                                </table>
+                               
                             </td>
                         </tr>
                     </tbody>

@@ -21,11 +21,9 @@ import ViewSchedule from './components/ViewScheduleComp';
 import ViewAppointmentDoctorComp from './components/ViewAppointmentDoctorComp';
 import AddScheduleComp from './components/AS';
 import AdminViewAppointmentsComp from './components/AdminViewAppointment';
-<<<<<<< HEAD
-import ViewAppointmentPatientComp from './components/patientBooking';
-=======
 import LogoutComp from './components/LogoutComp';
->>>>>>> 84f2cae4e1be608cb18fc9c78623be59b4c98e05
+import ViewAppointmentPatientComp from './ViewAppointmentPcomp';
+import AdminFreq from './components/adminFreq';
 // import ViewAppointmentDoctorComp from './components/ViewAppointmentDoctorComp';
 
 function App() {
@@ -33,7 +31,7 @@ function App() {
   
 
   // List of routes where you want to hide the navigation bar
-  const hiddenRoutes = ['/login', '/patient', '/doctor', '/Phame', '/Dhame', '/Ahame' ];
+  const hiddenRoutes = ['/login', '/patient', '/doctor', '/Phame', '/Dhame', '/Ahame','/viewAppointByAdmin','/AdminViewPatientsComp','/viewSchedules','/requestA','/viewDocA','/addSh','/Phame/viewSchedule','/Phame/vsp','/Phame/viewAllAppoinment','/ViewDoctorComp' ,'/viewAllPatientInfo','/frequent'];
 
   const shouldShowNavBar = !hiddenRoutes.includes(location.pathname);
 
@@ -99,6 +97,7 @@ function App() {
           <Route path="/Phame/vsp" element={<AllDoctorsComp/>}  />
            <Route path="/Phame/viewSchedule" element={<ViewSchedule/>}  />
            <Route path="/Phame/viewAllAppoinment" element={<ViewAppointmentPatientComp/>}  />
+
           </Route>
           
           <Route path="/Dhame" element={<DoctorDash />} />
@@ -115,7 +114,8 @@ function App() {
                  <Route path="/addSh" element={<AddScheduleComp/>} /> 
 
                  <Route path="/viewAppointByAdmin" element={<AdminViewAppointmentsComp/>} />  
-
+                 <Route path="/frequent" element={<AdminFreq/>} />
+        
         </Routes>
       </div>
     </div>

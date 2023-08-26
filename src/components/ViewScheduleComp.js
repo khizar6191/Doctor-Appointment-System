@@ -14,6 +14,7 @@ export default function ViewSchedule() {
 
     const navigate = useNavigate();
     const doctorid = localStorage.getItem("doctorid");
+    
     const [slots, setSlots] = useState([]);
     const [doctor, setDoctor] = useState({});
 
@@ -34,7 +35,7 @@ export default function ViewSchedule() {
     const [info, dispatch] = useReducer(reducer, init);
 
     useEffect(() => {
-        fetch("http://localhost:8080/getSchedule?doctor_id_=" + doctorid)
+        fetch("http://localhost:8080/getSchedule?doctor_id_=" +doctorid)
             .then(resp => resp.json())
             .then(obj => {
                 setSlots(obj);
@@ -42,6 +43,7 @@ export default function ViewSchedule() {
     }, []);
 
     useEffect(() => {
+        alert(doctorid)
         fetch("http://localhost:8080/getDoctorBy?doctor_id_=" + doctorid)
             .then(resp => resp.json())
             .then(obj => {

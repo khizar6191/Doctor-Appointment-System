@@ -23,17 +23,6 @@ export default function AdminViewPatientsComp(){
         
     }
 
-    const deletePatient=(e)=>{
-      
-        fetch("http://localhost:8080/deleteByUId?user_id="+e)
-        .then(resp=>resp.json())
-        .then(obj=>  {    if(obj===true)
-                        {
-                            alert("Patient removed...");
-                        }
-                    
-        })
-    }
 
 
     return(
@@ -64,14 +53,15 @@ export default function AdminViewPatientsComp(){
                                         <td>
                                             <button type="submit" className="btn btn-primary btn-lg ms-2" onMouseDown={()=>{setStorage(patient.id_)}}
                                                                                       onMouseUp={()=>{navigate("/viewAllPatientInfo")}}>View details</button>
-                                            <button type="submit" className="btn btn-primary btn-lg ms-2" onClick={()=>{deletePatient(patient.user_id)}}>Remove</button>
-                                        </td>
+                                             </td>
                                 </tr>
                         })  
                     }
                     </tbody>
                 </table>
              </form>
+             <button className="btn btn-primary btn-lg ms-2" onClick={() => navigate("/Ahame")} > Back</button>
+            
         </div>
     )
 }

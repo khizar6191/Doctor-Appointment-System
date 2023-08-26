@@ -59,7 +59,7 @@ export default function ViewAppointmentDoctorComp() {
         </td>
     </tr>
 ))}
-
+            <button className="btn btn-primary btn-lg ms-2" onClick={() => navigate("/Dhame")} > Back</button>
                     </tbody>
                 </table>
             </form>

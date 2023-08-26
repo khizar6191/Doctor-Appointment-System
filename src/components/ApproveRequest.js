@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 //THIS COMPONENT WILL DISPLAY PATIENT INFORMATION
 export default function ApproveReq(){
 
+    const navigate = useNavigate();
   
     const[info,setInfo]=useState(null);
     
@@ -70,6 +71,8 @@ export default function ApproveReq(){
         ))}
     </tbody>
 </table>
+<button className="btn btn-primary btn-lg ms-2" onClick={() => navigate("/Ahame")} > Back</button>
+   
             {/*JSON.stringify(info)*/}
         </div>
     )

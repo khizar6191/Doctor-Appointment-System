@@ -1,10 +1,11 @@
 import { useEffect ,useState } from "react"
-
+import { useNavigate } from "react-router-dom";
 export default function AdminViewAppointmentsComp(){
 
     const[appointments,setAppointments]=useState([]);
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
+    const navigate = useNavigate();
+  
     useEffect(()=>{
 
         fetch("http://localhost:8080/getAllAppointments")
@@ -49,6 +50,8 @@ export default function AdminViewAppointmentsComp(){
         ))}
       </tbody>
     </table>            </form>
+    <button className="btn btn-primary btn-lg ms-2" onClick={() => navigate("/Ahame")} > Back</button>
+           
         </div>
     )
 }
