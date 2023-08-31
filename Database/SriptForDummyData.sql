@@ -6,7 +6,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 
 -- Truncate each table
 
-TRUNCATE TABLE DayAvailables;
+
 TRUNCATE TABLE Appointments;
 TRUNCATE TABLE Patients;
 TRUNCATE TABLE Transactions;
@@ -17,7 +17,7 @@ TRUNCATE TABLE Specialities;
 TRUNCATE TABLE Roles;
 TRUNCATE TABLE SubscriptionPlans;
 TRUNCATE TABLE Questions;
-TRUNCATE TABLE Days;
+
 TRUNCATE TABLE Locations;
 
 -- Enable foreign key checks again
@@ -71,13 +71,7 @@ INSERT INTO Questions (id_, questions_) VALUES
 (4, 'What is your fvt actor ?'),
 (5, 'What is your fvt color ?');
 
--- Days
-INSERT INTO Days (id_, day_) VALUES
-(1, 'Monday'),
-(2, 'Tuesday'),
-(3, 'Wednesday'),
-(4, 'Thursday'),
-(5, 'Friday');
+
 
 -- Users
 INSERT INTO Users (id_, role_id_, email_,password_, question_id_, answer_, status_) VALUES
@@ -106,7 +100,4 @@ INSERT INTO Patients (id_, user_id_, fname_, lname_, gender_, email_, password_,
 INSERT INTO Appointments (id_, patient_id_, time_,doctor_id_, date_, status_) VALUES
 (1, 1, '09:00:00',1,'2023-08-30', 1);
 
--- DayAvailables
-INSERT INTO DayAvailables (doctor_id_, day_id_) VALUES
-(1, 1),
-(1, 3);
+
