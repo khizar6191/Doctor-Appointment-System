@@ -129,10 +129,4 @@ CREATE TABLE IF NOT EXISTS Appointments (
 	FOREIGN KEY (doctor_id_) REFERENCES Doctors(id_)
 );
 
--- DaysAvailbales
-CREATE TABLE IF NOT EXISTS DayAvailables (
-    doctor_id_ INT NOT NULL,
-    day_id_ INT NOT NULL,
-FOREIGN KEY (doctor_id_) REFERENCES appointments(id_),
-    FOREIGN KEY (day_id_) REFERENCES Days(id_)
-);
+
